@@ -58,13 +58,15 @@
 
 ul {
 	list-style-type: upper-alpha;
-	width: 50%;
+	width: 35%;
 	display: block;
 	margin-left: auto;
 	margin-top: 2%;
 	margin-right: auto;
-	text-align: center;
-
+	text-align: left;
+}
+li {
+	padding: .5em;
 }
 
 @media only screen 
