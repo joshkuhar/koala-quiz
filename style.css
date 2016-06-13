@@ -1,0 +1,75 @@
+* {
+	border: solid .5px red;
+}
+
+
+#instructions {
+	width: 35%;
+	text-align: center;
+	margin-top: 5%;
+	margin-left: auto;
+	margin-right: auto;
+	background-color: aqua;
+}
+
+#play-again {
+	width: 15%;
+	margin-right: 10%;
+	background-color: teal;
+	text-align: center;
+	display: inline-block;
+	float: right;
+}
+
+#scoreboard {
+	background-color: #90C3D4;
+	width: 20%;
+	margin-top: 5%;
+	margin-right: 75%;
+	margin-left: 10%;
+}
+
+#koala {
+	display: block;
+	width: 35%;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+}
+
+#question {
+	width: 50%;
+	display: block;
+	margin-top: 2%;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+}
+
+#explanation {
+	width: 50%;
+	display: block;
+	margin-left: auto;
+	margin-top: 2%;
+	margin-right: auto;
+	text-align: center;
+}
+
+
+ul {
+	list-style-type: upper-alpha;
+	width: 50%;
+	display: block;
+	margin-left: auto;
+	margin-top: 2%;
+	margin-right: auto;
+	text-align: center;
+
+}
+
+
+
+
+
+
+
