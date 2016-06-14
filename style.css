@@ -1,40 +1,49 @@
-* {
-	border: solid .5px red;
+
+body {
+	background-color: #A1D490;
 }
 
 
-#instructions {
+#title {
 	width: 35%;
 	text-align: center;
 	margin-top: 5%;
 	margin-left: auto;
 	margin-right: auto;
-	background-color: aqua;
+	color: white;
 }
-
-#play-again {
-	width: 15%;
-	margin-right: 10%;
-	background-color: teal;
-	text-align: center;
-	display: inline-block;
-	float: right;
+#nav {
+	width: 60%;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 1%;
 }
-
 #scoreboard {
-	background-color: #90C3D4;
 	width: 20%;
-	margin-top: 5%;
+	margin-top: 2%;
+	margin-bottom: 2%;
 	margin-right: 75%;
-	margin-left: 10%;
+	margin-left: 0;
+	color: white;
 }
+#play-again {
+	width: 20%;
+	text-align: center;
+	float: right;
+	margin-top: 2%;
+	margin-bottom: 2%;
+	color: white;
+}
+
+
 
 #koala {
 	display: block;
-	width: 35%;
+	max-width: 15%;
+	max-height: 15%;
 	margin-left: auto;
 	margin-right: auto;
-	text-align: center;
+	border-radius: 25px;
 }
 
 #question {
@@ -44,6 +53,9 @@
 	margin-left: auto;
 	margin-right: auto;
 	text-align: center;
+	padding: 1%;
+	background-color: #90C3D4;
+	border-radius: 25px;
 }
 
 #explanation {
@@ -53,6 +65,9 @@
 	margin-top: 2%;
 	margin-right: auto;
 	text-align: center;
+	padding: 1%;
+	background-color: #C390D4;
+	border-radius: 25px;
 }
 
 
@@ -64,6 +79,8 @@ ul {
 	margin-top: 2%;
 	margin-right: auto;
 	text-align: left;
+	background-color: #90C3D4;
+	border-radius: 25px;
 }
 li {
 	padding: .5em;

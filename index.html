@@ -6,31 +6,25 @@
 	<link rel="stylesheet" href="style.css">
 </head>
 <body>
-<header id="instructions">
-	This is a simple quiz to test your knowledge of koala bears. 
-</header>
-<div id="play-again">
-	Play Again
+<h1 id="title">The Koala Quiz</h1>
+<div id="nav">
+	<div id="play-again"> Play Again </div>
+	<section id="scoreboard">
+		<div>Question <span id="question-counter">1</span></div>
+		<div>Score <span id="score">0</span></div>
+	</section>
 </div>
-<section id="scoreboard">
-<div>Question <span id="question-counter">1</span></div>
-<div>Score <span id="score">0</span></div>
-</section>
+
 <main>
-	<img id="koala" src="" alt="Picture of a Koala">
+	<img id="koala" src="images/koala-munching.jpg" alt="Picture of a Koala">
 	<section id="quiz-questions">
-	<div id="question">
-		This is where the question goes.
-	</div>
-	<div id="explanation">
-		This is where the correct answer with an explanation to the question goes.
-	</div>
-	<ul id="questions">
-		<li id="first-answer">First possible answer. The koala bear likes to sleep and eat as much as possible. This is also known as being a koala bear.</li>
-		<li id="second-answer">Second possible answer</li>
-		<li id="third-answer">Third possible answer</li>
-	</ul>
-		
+		<div id="question"></div>
+		<div id="explanation"></div>
+		<ul id="answers">
+			<li id="a1"></li>
+			<li id="a2"></li>
+			<li id="a3"></li>
+		</ul>
 	</section>
 </main>
 
