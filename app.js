@@ -47,16 +47,23 @@ function insertExplanation(){
   	$("#explanation").append(Questions[currentQuestion].explanation);
 }
 
-function insertAnswers(answers){
-	$("#a1").empty();
-  	$("#a1").append(answers);
-}
+/*function insertAnswers(){
+	$("#answers").empty();
+  	$("#answers").append("<li>" +Questions[0].answers[0]+ "</li><li>" +Questions[0].answers[1]+  "</li><li>" +Questions[0].answers[2]+ "</li>");
+}*/
 
+function insertAnswers(){
+	$("#answers").empty();
+	for (var y = 0; y < Questions[currentQuestion].answers.length; y++){
+		$("#answers").append("<li>" +Questions[currentQuestion].answers[y]+ "</li>");
+	}
+  	
+}
 $("#submit").click(function(event) {
       event.preventDefault();
       insertQuestion();
       insertExplanation();
-      insertAnswers(Questions[0].answers[0]);
+      insertAnswers();
 
 });
 /*
