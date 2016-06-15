@@ -35,12 +35,20 @@ body {
 	color: white;
 }
 
+#instructions {
+	width: 30%;
+    text-align: center;
+    margin: 0 auto;
+    color: white;
+    font-size: 160%;
+}
+
 #radio {
 
 }
 
 #koala {
-	display: block;
+	display: none;
 	max-width: 15%;
 	max-height: 15%;
 	margin-left: auto;
@@ -56,7 +64,7 @@ body {
 	margin-right: auto;
 	text-align: center;
 	padding: 1%;
-	background-color: #90C3D4;
+	background-color: #A1D490;
 	border-radius: 25px;
 }
 
@@ -68,12 +76,12 @@ body {
 	margin-right: auto;
 	text-align: center;
 	padding: 1%;
-	background-color: #C390D4;
+	background-color: #A1D490;
 	border-radius: 25px;
 }
 
 
-ul {
+ul, form {
 	list-style-type: none;
 	width: 20%;
 	display: block;
@@ -81,7 +89,7 @@ ul {
 	margin-top: 2%;
 	margin-right: auto;
 	text-align: center;
-	background-color: #90C3D4;
+	background-color: #A1D490;
 	border-radius: 25px;
 }
 input {
@@ -91,6 +99,7 @@ input {
 #submit {
 	min-width: 8%;
 	margin-left: 33%;
+	display: none;
 
 }
 

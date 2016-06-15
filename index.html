@@ -14,21 +14,22 @@
 		<div>Score <span id="score">0</span></div>
 	</section>
 </div>
-
+<section id="instructions">
+<div>See how much you know about koalas. Press start to take the quiz.</div>
+<div><button id="start">Start</button></div>
+</section>
 <main>
 	<img id="koala" src="images/koala-munching.jpg" alt="Picture of a Koala">
 	<section id="quiz-questions">
-		<form>
 		<div id="question"></div>
 		<div id="explanation"></div>
-		<ul id="answers">
-			<li id="a1"><input type="radio" id="radio"><label for="radio"></label></li>
-			<li id="a2"><input type="radio" id="radio"><label for="radio"></label></li>
-			<li id="a3"><input type="radio" id="radio"><label for="radio"></label></li>
-			<input type="radio" name="radio" value=""><br />
-		</ul>
-		<div id=forbttn><button id="submit">Submit</button></div>
+		<div id="answers">
+		<form>
+		<input type="radio" name="radio" value="18 hours">18 hours</br>
+		<input type="radio" name="radio" value="8 hours">8 hours</br>
 		</form>
+		</div>
+		<div id=forbttn><button id="submit">Submit</button></div>
 	</section>
 </main>
 
