@@ -134,6 +134,7 @@ input {
 	font-size: 100%;
 	background-color: white;
 	border-radius: 25px;
+	margin-top: 1em;
 	margin-bottom: 5em;
 }
 	form {
@@ -141,10 +142,20 @@ input {
 	}
 
 	input {
-		height: 3em;
-		width: 4em;
-		margin: 1.5em;
+		height: 5em;
+		width: 5em;
+		margin: 2em;
 	}
+	#feedback-yes, #feedback-no, #question, #explanation {
+		width: 90%;
+	}
+
+	#koala {
+	max-width: 100%;
+	max-height: 100%;
+	
+
+}
 
 
 }
