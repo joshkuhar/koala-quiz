@@ -37,7 +37,8 @@ var Questions = [
 ];
 
 function gameOver(){
-	$("#instructions, #next, #feedback-yes, #feedback-no, #explanation").css("display", "none");
+	$("#instructions, #next, #feedback-yes, #feedback-no, #explanation, #answers, #question, #koala").css("display", "none");
+	$("#play-again").css("display", "inline");
 }
 
 function changeInitialDisplays(){
@@ -112,18 +113,30 @@ $("#submit").click(function(event) {
 
 $("#next").click(function(event) {
       event.preventDefault();
+      currentQuestion++;     
+      if (currentQuestion < 5) {
+		changeInitialDisplays();
+		insertAnswers();
+      	insertQuestion();
+      	questionTracker();
+      } else {
+      	gameOver();
+      }
+});
+
+$("#do-over").click(function(event) {
+      event.preventDefault();
+      currentQuestion = 0; 
+      correctAnswers = 0;
+      $("#score").empty();
+      $("#score").append(correctAnswers);
+      questionTracker();
+      $("#do-over").css("display", "none");
+      $("#question, #answers").css("display", "block");
       insertQuestion();
       insertAnswers();
       changeInitialDisplays();
-      currentQuestion++;
-      if (currentQuestion < 5) {
-      	questionTracker();
-      }
-      else {
-      	
-      }
-      
-      
+ 
 });
 /*
 
