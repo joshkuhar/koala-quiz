@@ -125,6 +125,14 @@ input {
 		font-size: 2.75em;
 		background-color: #A1D490;
 	}
+	#scoreboard {
+		margin-top: 2%;
+		margin-bottom: 2%;
+		margin-left: 0;
+	}
+	.bttn {
+	font-size: 10%;
+}
 }
 
 
