@@ -130,9 +130,23 @@ input {
 		margin-bottom: 2%;
 		margin-left: 0;
 	}
-	.bttn {
-	font-size: 10%;
+	button {
+	font-size: 100%;
+	background-color: white;
+	border-radius: 25px;
+	margin-bottom: 5em;
 }
+	form {
+		width: 50%;
+	}
+
+	input {
+		height: 3em;
+		width: 4em;
+		margin: 1.5em;
+	}
+
+
 }
 
 
