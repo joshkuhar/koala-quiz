@@ -57,8 +57,10 @@ body {
 	border-radius: 25px;
 }
 
-#question {
+#question, #explanation {
 	width: 50%;
+}
+.text-area {
 	display: block;
 	margin-top: 2%;
 	margin-left: auto;
@@ -67,19 +69,19 @@ body {
 	padding: 1%;
 	background-color: #A1D490;
 	border-radius: 25px;
+}
+#feedback-yes {
+	width: 20%;
+	display: none;
+}
+#feedback-no {
+	width: 20%;
+	display: none;
 }
 
-#explanation {
-	width: 50%;
-	display: block;
-	margin-left: auto;
-	margin-top: 2%;
-	margin-right: auto;
-	text-align: center;
-	padding: 1%;
-	background-color: #A1D490;
-	border-radius: 25px;
-}
+
+
+
 
 
 ul, form {

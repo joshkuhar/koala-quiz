@@ -1,17 +1,18 @@
 "use strict";
 
 var currentQuestion = 0;
+var correctAnswers = 0;
 
 var Questions = [
 	{
 	question: "About how many hours a day do koala bears sleep?",
-	explanation: "Koalas don’t move around much. They spend an enormous amount of time napping, so much time that they were once thought to be a type of cat.",
+	explanation: "Koalas don’t move around much. They sleep almost 18 hours a day. They spend an enormous amount of time napping, so much time that they were once thought to be a type of cat.",
 	answers: ["8 hours", "12 hours", "18 hours"],
 	correct: "2"
 	},			
 	{
 	question: "About how much do koala bears eat a day?",
-	explanation: "When koala bears aren’t sleeping, they’re usually eating eucalyptus leaves. They eat quite a bit. The average koala weighs about 20 pounds (9 kilograms). That’s a lot of food for such a little creature. A lot of koalas are chubby, too.",
+	explanation: "When koala bears aren’t sleeping, they’re usually eating eucalyptus leaves, about 2 and a half pounds a day. They eat quite a bit. The average koala weighs about 20 pounds (9 kilograms). That’s a lot of food for such a little creature. A lot of koalas are chubby, too.",
 	answers: ["2 and 1/2 pounds (1 kilogram)", "1 pound (1/2 kilogram)", "1/2 a pound (1/5 kilogram)"],
 	correct: "0"
 	},
@@ -23,7 +24,7 @@ var Questions = [
 	},
 	{
 	question: "How many trees does a koala bear need to be happy?",
-	explanation: "Koala bears eat so much food they need a small forest just to be happy. It’s amazing how many trees one koala needs. They also like to nap in the branches.",
+	explanation: "Koala bears eat so much food they need a small forest just to be happy, about 100 trees. It’s amazing how many trees one koala needs. They also like to nap in the branches.",
 	answers: ["20", "100", "200"],
 	correct: "1"
 	},
@@ -35,12 +36,16 @@ var Questions = [
 	}
 ];
 
+function gameOver(){
+	$("#instructions, #next, #feedback-yes, #feedback-no, #explanation").css("display", "none");
+}
+
 function changeInitialDisplays(){
 	$("#question, form").css("background-color", "#90C3D4");
 	//$("#explanation").css("background-color", "#C390D4");
 	$("#koala, #nav").css("display", "block");
 	$("#submit").css("display", "inline");
-	$("#instructions").css("display", "none");
+	$("#instructions, #next, #feedback-yes, #feedback-no, #explanation").css("display", "none");
 
 }
 
@@ -50,26 +55,18 @@ function submittedDisplays(){
 	$("#next").css("display", "inline");
 }
 
-function answeredRight(){
-
-}
-
-function answeredWrong(){
-
-}
-
-function startGame() {
-
-}
 
 function checkAnswer() {
 	var selectedAnswer = $("input[type='radio']:checked", "form").val();
 	if (selectedAnswer === Questions[currentQuestion].correct) {
-		$("#explanation").css("background-color", "#C390D4");
-		insertExplanation();
-		currentQuestion++;
+		correctAnswers++;
+		$("#score").empty();
+  		$("#score").append(correctAnswers);
+
+		$("#feedback-yes").css("display", "block").css("background-color", "#C390D4");
 		console.log("This is correct");
 	} else {
+		$("#feedback-no").css("display", "block").css("background-color", "#C390D4");
 		console.log("This is wrong");
 	}
 }
@@ -86,9 +83,9 @@ function insertQuestion(){
 
 function insertExplanation(){
 	$("#explanation").empty();
+	$("#explanation").css("display", "block").css("background-color", "#C390D4");
   	$("#explanation").append(Questions[currentQuestion].explanation);
 }
-
 
 function insertAnswers(){
 	$("form").empty();
@@ -107,13 +104,7 @@ $("#start").click(function(event) {
 
 $("#submit").click(function(event) {
       event.preventDefault();
-      //insertQuestion();
       insertExplanation();
-      //insertAnswers();
-      
-      //questionTracker();
-      //changeBackgrounds();
-      //var n = getAnswer();
       submittedDisplays();
       checkAnswer();
       
@@ -124,6 +115,14 @@ $("#next").click(function(event) {
       insertQuestion();
       insertAnswers();
       changeInitialDisplays();
+      currentQuestion++;
+      if (currentQuestion < 5) {
+      	questionTracker();
+      }
+      else {
+      	
+      }
+      
       
 });
 /*

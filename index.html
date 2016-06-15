@@ -10,7 +10,7 @@
 <div id="nav">
 	<div id="play-again"> Play Again </div>
 	<section id="scoreboard">
-		<div>Question <span id="question-counter">1</span></div>
+		<div>Question <span id="question-counter">1</span> of 5</div>
 		<div>Score <span id="score">0</span></div>
 	</section>
 </div>
@@ -21,8 +21,10 @@
 <main>
 	<img id="koala" src="images/koala-munching.jpg" alt="Picture of a Koala">
 	<section id="quiz-questions">
-		<div id="question"></div>
-		<div id="explanation"></div>
+		<div class="text-area" id="question"></div>
+		<div class="text-area" id="feedback-yes">Correct!</div>
+		<div class="text-area" id="feedback-no">Sorry, wrong answer.</div>
+		<div class="text-area" id="explanation"></div>
 		<div id="answers">
 		<form>
 		</form>
