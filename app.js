@@ -34,8 +34,18 @@ var Questions = [
 	correct: "Blinky Bill"
 	}
 ];
-	
 
+
+function checkAnswer() {
+	var answer = $("input[type='checkbox']:checked").val();
+	console.log(answer);
+	}
+
+	
+function questionTracker(){
+	$("#question-counter").empty();
+  	$("#question-counter").append(currentQuestion + 1);
+}
 
 function insertQuestion(){
   	$("#question").empty();
@@ -47,15 +57,11 @@ function insertExplanation(){
   	$("#explanation").append(Questions[currentQuestion].explanation);
 }
 
-/*function insertAnswers(){
-	$("#answers").empty();
-  	$("#answers").append("<li>" +Questions[0].answers[0]+ "</li><li>" +Questions[0].answers[1]+  "</li><li>" +Questions[0].answers[2]+ "</li>");
-}*/
 
 function insertAnswers(){
 	$("#answers").empty();
 	for (var y = 0; y < Questions[currentQuestion].answers.length; y++){
-		$("#answers").append("<li>" +Questions[currentQuestion].answers[y]+ "</li>");
+		$("#answers").append("<li><input id='checkbox' type='checkbox'>  " +Questions[currentQuestion].answers[y]+ "</li>");
 	}
   	
 }
@@ -64,7 +70,9 @@ $("#submit").click(function(event) {
       insertQuestion();
       insertExplanation();
       insertAnswers();
-
+      currentQuestion++;
+      questionTracker()
+      
 });
 /*
 

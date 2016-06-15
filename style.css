@@ -35,7 +35,9 @@ body {
 	color: white;
 }
 
+#checkbox {
 
+}
 
 #koala {
 	display: block;
@@ -72,18 +74,24 @@ body {
 
 
 ul {
-	list-style-type: upper-alpha;
+	list-style-type: none;
 	width: 35%;
 	display: block;
 	margin-left: auto;
 	margin-top: 2%;
 	margin-right: auto;
-	text-align: left;
+	text-align: center;
 	background-color: #90C3D4;
 	border-radius: 25px;
 }
 li {
 	padding: .5em;
+	text-align: left;
+}
+#submit {
+	min-width: 8%;
+	margin-left: 33%;
+
 }
 
 @media only screen 
