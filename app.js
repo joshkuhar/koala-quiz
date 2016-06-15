@@ -37,7 +37,7 @@ var Questions = [
 
 
 function checkAnswer() {
-	var answer = $("input[type='checkbox']:checked").val();
+	var answer = $("input[type='radio']:checked").val();
 	console.log(answer);
 	}
 
@@ -61,7 +61,7 @@ function insertExplanation(){
 function insertAnswers(){
 	$("#answers").empty();
 	for (var y = 0; y < Questions[currentQuestion].answers.length; y++){
-		$("#answers").append("<li><input id='checkbox' type='checkbox'>  " +Questions[currentQuestion].answers[y]+ "</li>");
+		$("#answers").append("<li><input id='radio' type='radio'>  " +Questions[currentQuestion].answers[y]+ "</li>");
 	}
   	
 }
@@ -76,70 +76,10 @@ $("#submit").click(function(event) {
 });
 /*
 
-var questions = [
-    
-    {
-        question: 'What is your name',
-        answers: ['answer1', 'answer2'],
-        correct: 'answer1'
-    },
-    {
-        question: 'How old are you',
-        answers: ['answer1', 'answer2'],
-        correct: 'answer2'
-    }
-]; 
-array of objects 
-so first question here is 
-questions[0]  
-question[0].question
-questions[0].answers - you gonna itterate through this and show answers to the users
-quesitons[0].correct - you will compare what user clicked in the answers to this, e.g. if(questions[0] === userInput) etc
 
-if(questions[0].correct === userInput)
-you will need a global variable called
-currentquestion 
-initial value 
-var currentQuestion  = 0;  
-then you will do
-question[currentQuestions].whatever
-so every time you increment that currentQuestion (if usre answered correctly)
-your function will generate a new one
-e.g. currentquestion will be 1
-which will be second element in your array of questions
+
+*/
 
 
 
 
-$(".new").click(function(event) {
-      event.preventDefault();
-      resetAllFields();
-      secretNum = changeSecretNum(secretNum);
-      console.log(secretNum);
-    }); 
-
-$("#guessButton").click(function(event) {
-      event.preventDefault();
-      console.log(previousGuess);
-      var guess = $("#userGuess").val();
-      // Validate input from game player
-      if (guess % guess !== 0) {
-        alert("Please enter a number");
-        $("#userGuess").val('');
-        console.log("not a valid number");
-      } 
-      else {
-        $("#guessList").append("<li> " + guess + " </li>");
-        $("#userGuess").val('');
-        count++;
-        $("#count").empty().append("<span> " +count+ " </span>");
-        guessMessage(guess, secretNum);
-        previousGuess = guess;
-      }
-    });    
-
-    $("#userGuess").keyup(function(event){
-      if(event.keyCode === 13) {
-         event.preventDefault();
-      }
- */
