@@ -34,7 +34,7 @@ var Questions = [
 	},
 	{
 	question: "Who is the most famous Koala Bear of all time?",
-	explanation: "Blinky Bill is the most famous. Dorthy Wall wrote a book about Blinky way back in 1933. And it’s been selling ever since, at least in Australia. If you've never read Blinky Bill, you should let someone know and because they might be interested in getting you a copy.",
+	explanation: "Blinky Bill is the most famous. Dorthy Wall wrote a book about Blinky way back in 1933. And it’s been selling ever since, at least in Australia. If you've never read Blinky Bill, you should let someone know because they might be interested in getting you a copy.",
 	answers: ["Blinky Bill", "Kathy Koala", "Winnie the Pooh"],
 	photo: "images/blinky-bill.jpg",
 	correct: "0"
