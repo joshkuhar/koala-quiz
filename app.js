@@ -35,11 +35,19 @@ var Questions = [
 	}
 ];
 
-function changeInitialBackgrounds(){
+function changeInitialDisplays(){
 	$("#question, form").css("background-color", "#90C3D4");
 	//$("#explanation").css("background-color", "#C390D4");
-	$("#submit, #koala").css("display", "block");
+	$("#koala, #nav").css("display", "block");
+	$("#submit").css("display", "inline");
 	$("#instructions").css("display", "none");
+
+}
+
+function submittedDisplays(){
+	$("#submit").css("display", "none");
+	$("#koala, #nav").css("display", "block");
+	$("#next").css("display", "inline");
 }
 
 function answeredRight(){
@@ -59,6 +67,7 @@ function checkAnswer() {
 	if (selectedAnswer === Questions[currentQuestion].correct) {
 		$("#explanation").css("background-color", "#C390D4");
 		insertExplanation();
+		currentQuestion++;
 		console.log("This is correct");
 	} else {
 		console.log("This is wrong");
@@ -92,20 +101,29 @@ $("#start").click(function(event) {
       event.preventDefault();
       insertQuestion();
       insertAnswers();
-      changeInitialBackgrounds();
+      changeInitialDisplays();
       
 });
 
 $("#submit").click(function(event) {
       event.preventDefault();
       //insertQuestion();
-      //insertExplanation();
+      insertExplanation();
       //insertAnswers();
-      //currentQuestion++;
+      
       //questionTracker();
       //changeBackgrounds();
       //var n = getAnswer();
+      submittedDisplays();
       checkAnswer();
+      
+});
+
+$("#next").click(function(event) {
+      event.preventDefault();
+      insertQuestion();
+      insertAnswers();
+      changeInitialDisplays();
       
 });
 /*

@@ -17,6 +17,7 @@ body {
 	margin-left: auto;
 	margin-right: auto;
 	margin-top: 1%;
+	display: none;
 }
 #scoreboard {
 	width: 20%;
@@ -96,11 +97,19 @@ input {
 	padding: .5em;
 	text-align: left;
 }
-#submit {
+.bttn-div {
+    text-align: center;
+    margin: 0 auto;
+}
+.bttn {
+	margin-top: 2%;
 	min-width: 8%;
-	margin-left: 33%;
+}
+#submit {
 	display: none;
-
+}
+#next {
+	display: none;
 }
 
 @media only screen 
