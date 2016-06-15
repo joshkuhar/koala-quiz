@@ -75,7 +75,7 @@ body {
 
 ul {
 	list-style-type: none;
-	width: 35%;
+	width: 20%;
 	display: block;
 	margin-left: auto;
 	margin-top: 2%;
@@ -84,7 +84,7 @@ ul {
 	background-color: #90C3D4;
 	border-radius: 25px;
 }
-li {
+input {
 	padding: .5em;
 	text-align: left;
 }

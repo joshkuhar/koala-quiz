@@ -61,7 +61,7 @@ function insertExplanation(){
 function insertAnswers(){
 	$("#answers").empty();
 	for (var y = 0; y < Questions[currentQuestion].answers.length; y++){
-		$("#answers").append("<li><input id='radio' type='radio'>  " +Questions[currentQuestion].answers[y]+ "</li>");
+		$("#answers").append("<input type='radio' name='radio' value="+Questions[currentQuestion].answers[y]+ ">" +Questions[currentQuestion].answers[y]+ "</br>");
 	}
   	
 }
